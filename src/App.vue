@@ -1,12 +1,13 @@
 <script setup>
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
+import BottomNav from './components/BottomNav.vue'
 </script>
 
 <template>
   <div class="min-h-screen bg-slate-50 font-sans text-slate-900">
     <AppHeader />
-    <main>
+    <main class="pb-mobile-nav md:pb-0">
       <RouterView v-slot="{ Component }">
         <transition name="fade" mode="out-in">
           <component :is="Component" />
@@ -14,6 +15,7 @@ import AppFooter from './components/AppFooter.vue'
       </RouterView>
     </main>
     <AppFooter />
+    <BottomNav />
   </div>
 </template>
 

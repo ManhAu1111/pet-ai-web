@@ -12,3 +12,8 @@ body {
     background-color: #f8fafc;
     /* bg-slate-50 */
 }
+
+/* Mobile bottom nav padding utility */
+.pb-mobile-nav {
+    padding-bottom: 96px; /* height of floating nav + breathing room */
+}

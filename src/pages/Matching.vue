@@ -1,4 +1,4 @@
-﻿<script setup>
+<script setup>
 import { ref, computed, onMounted } from 'vue'
 import { Check, ChevronLeft } from 'lucide-vue-next'
 import { useRouter } from 'vue-router'
@@ -223,16 +223,16 @@ onMounted(() => {
                         <button v-for="opt in questions[currentStep].options" :key="opt.value"
                             @click="selectOption(opt.value)"
                             class="group flex items-center justify-between p-4 border-2 rounded-2xl transition-all duration-300 text-left active:scale-[0.98]"
-                            :class="answers[questions[currentStep].key] === opt.value ? 'border-teal-500 bg-teal-50 shadow-md shadow-teal-100/60' : 'border-slate-100 hover:border-teal-400 hover:bg-teal-50/30'">
+                            :class="JSON.stringify(answers[questions[currentStep].key]) === JSON.stringify(opt.value) ? 'border-teal-500 bg-teal-50 shadow-md shadow-teal-100/60' : 'border-slate-100 hover:border-teal-400 hover:bg-teal-50/30'">
                             <div>
                                 <p class="font-bold text-base text-slate-800"
-                                    :class="answers[questions[currentStep].key] === opt.value ? 'text-teal-800' : ''">{{
+                                    :class="JSON.stringify(answers[questions[currentStep].key]) === JSON.stringify(opt.value) ? 'text-teal-800' : ''">{{
                                         opt.text }}
                                 </p>
                             </div>
                             <div class="w-8 h-8 rounded-full border-2 flex items-center justify-center transition-all"
-                                :class="answers[questions[currentStep].key] === opt.value ? 'border-teal-500 bg-teal-500' : 'border-slate-200 group-hover:border-teal-400'">
-                                <Check v-if="answers[questions[currentStep].key] === opt.value"
+                                :class="JSON.stringify(answers[questions[currentStep].key]) === JSON.stringify(opt.value) ? 'border-teal-500 bg-teal-500' : 'border-slate-200 group-hover:border-teal-400'">
+                                <Check v-if="JSON.stringify(answers[questions[currentStep].key]) === JSON.stringify(opt.value)"
                                     class="text-white w-5 h-5" />
                             </div>
                         </button>
