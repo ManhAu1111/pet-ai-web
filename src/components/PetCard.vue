@@ -42,8 +42,7 @@ const goToDetail = () => {
     </div>
     <div class="p-5">
       <div class="flex justify-between items-start mb-1">
-        <h3 class="font-bold text-lg text-slate-900 line-clamp-1" :title="pet.name">{{ pet.name.charAt(0).toUpperCase()
-          + pet.name.slice(1) }}</h3>
+        <h3 class="font-bold text-lg text-slate-900 line-clamp-1 capitalize" :title="pet.name">{{ pet.name }}</h3>
       </div>
 
       <div class="flex items-center gap-3 text-slate-500 text-xs mb-3">

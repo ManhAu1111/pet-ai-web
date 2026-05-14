@@ -57,7 +57,7 @@ const getStarCount = (score) => {
             <div v-else class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
                 <!-- Left Column: Image & Quick Stats (lg:col-span-5) -->
-                <div class="lg:col-span-5 space-y-6 sticky top-24">
+                <div class="lg:col-span-5 space-y-6 lg:sticky lg:top-24">
                     <div
                         class="bg-white rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 relative group h-[400px] lg:h-[500px]">
                         <img :src="pet.image_path"
@@ -136,7 +136,7 @@ const getStarCount = (score) => {
 
                     <!-- Title Section -->
                     <div>
-                        <h1 class="text-4xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight">{{ pet.name }}
+                        <h1 class="text-4xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight capitalize">{{ pet.name }}
                         </h1>
                         <div class="flex items-center gap-4 text-slate-500 font-bold text-lg">
                             <span
@@ -154,7 +154,7 @@ const getStarCount = (score) => {
                         </div>
 
                         <h3 class="text-xl font-bold mb-6 flex items-center gap-2 border-b border-white/20 pb-4">
-                            <DollarSign class="w-6 h-6" /> Bảng giá tham khảo
+                            <DollarSign class="w-6 h-6" />
                         </h3>
 
                         <div class="space-y-4 relative z-10">
@@ -187,7 +187,7 @@ const getStarCount = (score) => {
                     </div>
 
                     <!-- CTA -->
-                    <div
+                    <!-- <div
                         class="bg-orange-50 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 border border-orange-100">
                         <div>
                             <h4 class="text-xl font-black text-slate-900 mb-2">Bạn quan tâm đến {{ pet.name }}?</h4>
@@ -198,7 +198,7 @@ const getStarCount = (score) => {
                             class="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl shadow-lg shadow-orange-500/30 transition transform hover:-translate-y-1">
                             Liên hệ ngay
                         </button>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>

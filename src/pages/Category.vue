@@ -243,7 +243,6 @@ const clearFilters = () => {
                             :disabled="currentPage === 1">
                             <ChevronLeft class="w-5 h-5 md:w-6 md:h-6" />
                         </button>
-
                         <template v-for="(p, index) in displayedPages" :key="index">
                             <button v-if="p !== '...'" @click="setPage(p)"
                                 class="w-10 h-10 md:w-12 md:h-12 rounded-2xl font-black text-base md:text-lg transition border-2"

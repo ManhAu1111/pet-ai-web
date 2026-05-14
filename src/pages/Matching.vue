@@ -296,7 +296,7 @@ onMounted(() => {
                         <img :src="pet.image" class="w-full h-full object-cover" :alt="pet.name">
                     </div>
 
-                    <h3 class="text-xl font-bold mb-2 min-h-[56px] leading-tight">
+                    <h3 class="text-xl font-bold mb-2 min-h-[56px] leading-tight capitalize">
                         {{ pet.name }}
                     </h3>
 
